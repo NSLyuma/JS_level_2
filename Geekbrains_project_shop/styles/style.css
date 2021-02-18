@@ -1332,6 +1332,9 @@ details summary::-webkit-details-marker {
   .description__border {
     width: 174px;
   }
+  #item_mb {
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 426px) {
