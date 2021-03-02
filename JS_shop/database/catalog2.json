@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "name": "Bread100",
+            "price": 1500,
+            "img": "img/bread.jpg"
+        },
+        {
+            "name": "Cheese100",
+            "price": 10000,
+            "img": "img/cheese.jpg"
+        },
+        {
+            "name": "Tea100",
+            "price": 5000,
+            "img": "img/tea.jpg"
+        },
+        {
+            "name": "Pizza100",
+            "price": 8000,
+            "img": "img/pizza.jpg"
+        }
+    ]
+}

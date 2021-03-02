@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h2 {
     text-align: center;
 }
