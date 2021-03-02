@@ -54,28 +54,13 @@ class GoodItem {
     render() {
         const placeToRender = document.querySelector(".goods-list");
         if (placeToRender) {
-            placeToRender.style.cssText = `
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            `;
-
             const goodItem = document.createElement("div");
+            goodItem.classList.add("item")
 
             goodItem.innerHTML = `
             <img src="${this._img}" width="200px" />
             <p>Item: ${this._name}</p>
             <span>Price: ${this._price}</span>
-            `;
-
-            goodItem.style.cssText = `
-            display: flex;
-            flex-direction: column;
-            background-color: #FFA07A;
-            border-radius: 10px;
-            padding: 10px;
-            width: 220px;
-            margin: 10px;
             `;
 
             const AddButton = new Button("Add to cart", this.addToCart.bind(this));
@@ -137,6 +122,7 @@ class CartItem {
         const placeToRender = document.querySelector(".cart-list");
         if (placeToRender) {
             const item = document.createElement("div");
+            item.classList.add("cart-item")
             item.innerHTML = `
             <div>
                 <img src="${this._img}" width="100px" />
@@ -147,16 +133,6 @@ class CartItem {
                 <p>Quantity:${this.counter}</p>
                 <p>Total: ${this._price * this.counter}</p>
             </div>
-            `;
-
-            item.style.cssText = `
-            display: flex;
-            justify-content: space-between;
-            background-color: #FFA07A;
-            border-radius: 10px;
-            padding: 10px;
-            width: 500px;
-            margin: 10px;
             `;
 
             placeToRender.appendChild(item);

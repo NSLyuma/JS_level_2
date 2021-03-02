@@ -19,15 +19,6 @@ class Button {
         if (placeToRender) {
             const button = document.createElement("button");
             button.innerHTML = this._text;
-            button.style.cssText = `
-            background-color: transparent;
-            border: 1px solid #8B4513;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            outline: none;
-            width: 90px;
-            `;
 
             placeToRender.appendChild(button);
 
