@@ -2,7 +2,6 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-    // console.log(req.url);
 
     let body = null;
 
@@ -14,13 +13,22 @@ const server = http.createServer((req, res) => {
             res.setHeader("Content-Type", "image/svg+xml");
         }
 
+        //     if (req.url.includes("/img")) {
+        //         body = fs.readFileSync(`./Geekbrains_project_shop${req.url}`);
+        //     } else {
+        //         body = fs.readFileSync(`./Geekbrains_project_shop${req.url}`, "utf8");
+        //     }
+        // } catch (err) {
+        //     body = fs.readFileSync("./Geekbrains_project_shop/index.html", "utf8");
+        // }
+
         if (req.url.includes("/img")) {
-            body = fs.readFileSync(`./Geekbrains_project_shop${req.url}`);
+            body = fs.readFileSync(`./JS_shop${req.url}`);
         } else {
-            body = fs.readFileSync(`./Geekbrains_project_shop${req.url}`, "utf8");
+            body = fs.readFileSync(`./JS_shop${req.url}`, "utf8");
         }
     } catch (err) {
-        body = fs.readFileSync("./Geekbrains_project_shop/index.html", "utf8");
+        body = fs.readFileSync("./JS_shop/index.html", "utf8");
     }
 
     res.end(body);
