@@ -26,6 +26,10 @@ summary, input, button {
   outline: none;
 }
 
+summary {
+  display: block;
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }
@@ -1252,7 +1256,6 @@ details summary::-webkit-details-marker {
   font-size: 14px;
   line-height: 17px;
   color: #6F6E6E;
-  display: block;
 }
 
 .description__arrow {
