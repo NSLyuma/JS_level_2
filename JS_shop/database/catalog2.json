@@ -1,24 +1,24 @@
 {
     "data": [
         {
-            "name": "Bread100",
-            "price": 1500,
-            "img": "img/bread.jpg"
+            "name": "Cookies",
+            "price": 100,
+            "img": "img/cookies.jpg"
         },
         {
-            "name": "Cheese100",
-            "price": 10000,
-            "img": "img/cheese.jpg"
+            "name": "Hamburger",
+            "price": 70,
+            "img": "img/hamburger.jpg"
         },
         {
-            "name": "Tea100",
-            "price": 5000,
-            "img": "img/tea.jpg"
+            "name": "Coffee",
+            "price": 50,
+            "img": "img/coffee.jpg"
         },
         {
-            "name": "Pizza100",
-            "price": 8000,
-            "img": "img/pizza.jpg"
+            "name": "Ham",
+            "price": 120,
+            "img": "img/ham.jpg"
         }
     ]
 }
