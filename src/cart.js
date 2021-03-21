@@ -29,4 +29,5 @@ export default class Cart extends AbstractList {
     render() {
         super.render(".cart-list");
     }
+
 }

@@ -2,9 +2,8 @@
 
 import AbstractList from "./shop";
 import GoodItem from "./good-item";
-import Cart from "./cart";
 
-class List extends AbstractList {
+export default class List extends AbstractList {
     _page = 1
     _CartInstance = null
 
@@ -44,6 +43,3 @@ class List extends AbstractList {
         super.render(".goods-list");
     }
 }
-
-const CartInstance = new Cart();
-new List(CartInstance);
