@@ -25,7 +25,7 @@ export default class List extends AbstractList {
     }
 
     fetchGoods() {
-        const url = `http://localhost:3000/database/catalog${this._page}.json`;
+        const url = `${document.location.protocol}//${document.location.host}/database/catalog${this._page}.json`;
         return fetch(url)
             .then(res => {
                 return res.json()
