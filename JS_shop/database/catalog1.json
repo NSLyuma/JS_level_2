@@ -1,24 +1,26 @@
 {
-    "data": [
-        {
-            "name": "Bread",
-            "price": 15,
-            "img": "img/bread.jpg"
-        },
-        {
-            "name": "Cheese",
-            "price": 100,
-            "img": "img/cheese.jpg"
-        },
-        {
-            "name": "Tea",
-            "price": 50,
-            "img": "img/tea.jpg"
-        },
-        {
-            "name": "Pizza",
-            "price": 80,
-            "img": "img/pizza.jpg"
-        }
-    ]
+    "1": {
+        "id": 1,
+        "name": "Bread",
+        "price": 15,
+        "img": "img/bread.jpg"
+    },
+    "2": {
+        "id": 2,
+        "name": "Cheese",
+        "price": 100,
+        "img": "img/cheese.jpg"
+    },
+    "3": {
+        "id": 3,
+        "name": "Tea",
+        "price": 50,
+        "img": "img/tea.jpg"
+    },
+    "4": {
+        "id": 4,
+        "name": "Pizza",
+        "price": 80,
+        "img": "img/pizza.jpg"
+    }
 }

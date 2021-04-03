@@ -1,43 +1,33 @@
 <template>
-  <div :class="[$style.goodsList]">
-    <div v-for="item in items" :key="item.name">
-      <CatalogItem :item="item"></CatalogItem>
-    </div>
+  <div>
+    <CatalogItem
+      v-for="id in getItemsOnPage"
+      :id="id"
+      :key="id"
+      @addItem="addToCart"
+    />
   </div>
 </template>
 
 <script>
 import CatalogItem from "./CatalogItem.vue";
+import CartItem from "./CartItem.vue";
+import { mapMutations, mapGetters, mapActions } from "vuex";
 
 export default {
-  data() {
-    return {
-      items: [
-        {
-          name: "Bread",
-          price: 15,
-          img: "./img/bread.jpg",
-        },
-        {
-          name: "Cheese",
-          price: 100,
-          img: "./img/cheese.jpg",
-        },
-        {
-          name: "Tea",
-          price: 50,
-          img: "img/tea.jpg",
-        },
-        {
-          name: "Pizza",
-          price: 80,
-          img: "img/pizza.jpg",
-        },
-      ],
-    };
+  methods: {
+    // ...mapMutations(["setData"]),
+    ...mapActions(["requestData", "addToCart"]),
+  },
+  computed: {
+    ...mapGetters(["getFullPrice", "getItemsOnPage"]),
+  },
+  created() {
+    this.requestData(1);
   },
   components: {
     CatalogItem,
+    CartItem,
   },
 };
 </script>
