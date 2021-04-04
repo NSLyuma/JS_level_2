@@ -13,31 +13,13 @@ const server = http.createServer((req, res) => {
             res.setHeader("Content-Type", "image/svg+xml");
         }
 
-        //     if (req.url.includes("/img")) {
-        //         body = fs.readFileSync(`./Geekbrains_project_shop${req.url}`);
-        //     } else {
-        //         body = fs.readFileSync(`./Geekbrains_project_shop${req.url}`, "utf8");
-        //     }
-        // } catch (err) {
-        //     body = fs.readFileSync("./Geekbrains_project_shop/index.html", "utf8");
-        // }
-
-        //     if (req.url.includes("/img")) {
-        //         body = fs.readFileSync(`./JS_shop${req.url}`);
-        //     } else {
-        //         body = fs.readFileSync(`./JS_shop${req.url}`, "utf8");
-        //     }
-        // } catch (err) {
-        //     body = fs.readFileSync("./JS_shop/index.html", "utf8");
-        // }
-
         if (req.url.includes("/img")) {
-            body = fs.readFileSync(`./RegExp${req.url}`);
+            body = fs.readFileSync(`./JS_shop${req.url}`);
         } else {
-            body = fs.readFileSync(`./RegExp${req.url}`, "utf8");
+            body = fs.readFileSync(`./JS_shop${req.url}`, "utf8");
         }
     } catch (err) {
-        body = fs.readFileSync("./RegExp/index.html", "utf8");
+        body = fs.readFileSync("./JS_shop/index.html", "utf8");
     }
 
     res.end(body);
