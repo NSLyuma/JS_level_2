@@ -1,14 +1,28 @@
 <template>
   <div :class="[$style.catalogItem]">
-    <img :src="item.img" width="200px" />
-    <p>Title: {{ item.name }}</p>
-    <p>Price: {{ item.price }}</p>
+    <img :src="getItemData.img" width="200px" />
+    <p>Title: {{ getItemData.name }}</p>
+    <p>Price: {{ getItemData.price }}</p>
+    <button @click="addToCart" :id="getItemData.id">Add to cart</button>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
-  props: ["item"],
+  props: {
+    id: String,
+  },
+  methods: {
+    ...mapActions(["addToCart"]),
+  },
+  computed: {
+    ...mapGetters(["getData"]),
+    getItemData() {
+      return this.getData[this.id];
+    },
+  },
 };
 </script>
 
