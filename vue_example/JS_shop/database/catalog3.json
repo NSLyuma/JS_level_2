@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "name": "Pie",
+            "price": 110,
+            "img": "img/pie.jpg"
+        },
+        {
+            "name": "Chocolate",
+            "price": 60,
+            "img": "img/chocolate.jpg"
+        },
+        {
+            "name": "Tomato",
+            "price": 40,
+            "img": "img/tomato.jpg"
+        },
+        {
+            "name": "Apple",
+            "price": 40,
+            "img": "img/apple.jpg"
+        }
+    ]
+}
