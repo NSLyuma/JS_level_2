@@ -9,7 +9,6 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-
 export default {
   props: {
     id: String,
@@ -34,7 +33,6 @@ export default {
   border-radius: 10px;
   padding: 10px;
   width: 220px;
-  height: 250px;
   margin: 10px;
 }
 </style>

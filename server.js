@@ -1,32 +1,36 @@
-const http = require("http");
 const fs = require("fs");
+const express = require("express");
+const bodyParser = require("body-parser");
 
-const server = http.createServer((req, res) => {
+const app = express();
 
-    let body = null;
+app.use(express.static("./JS_shop"));
+app.use(bodyParser.json());
 
-    try {
-        const ext = req.url.split(".")[1];
-        const isSvg = ext === "svg"
-
-        if (isSvg) {
-            res.setHeader("Content-Type", "image/svg+xml");
-        }
-
-        if (req.url.includes("/img")) {
-            body = fs.readFileSync(`./JS_shop${req.url}`);
-        } else {
-            body = fs.readFileSync(`./JS_shop${req.url}`, "utf8");
-        }
-    } catch (err) {
-        body = fs.readFileSync("./JS_shop/index.html", "utf8");
-    }
-
-    res.end(body);
+app.get("/itemslist/:page", (req, res) => {
+    const page = req.params.page;
+    fs.readFile(`./JS_shop/database/catalog${page}.json`, "utf8", (err, data) => {
+        res.send(data);
+    });
 });
 
-const port = process.env.PORT || 3000
+app.post("/itemslist", (req, res) => {
+    const offset = 8;
+    const filePath = "./JS_shop/database/catalog3.json";
 
-server.listen(port);
+    fs.readFile(filePath, "utf8", (err, data) => {
+        const list = JSON.parse(data || {});
+        const amountOfData = Object.keys(list).length;
+        const newId = offset + amountOfData + 1;
+        const newItem = req.body;
+        newItem.id = newId;
+        list[newId] = newItem;
+        fs.writeFile(filePath, JSON.stringify(list), (err) => {
+            res.send(list);
+        });
+    });
+});
 
-console.log(`Server started on port ${port}!`);
+app.listen(4000, () => {
+    console.log("Server started!");
+});

@@ -1,24 +1,30 @@
 {
-    "data": [
-        {
-            "name": "Cookies",
-            "price": 100,
-            "img": "img/cookies.jpg"
-        },
-        {
-            "name": "Hamburger",
-            "price": 70,
-            "img": "img/hamburger.jpg"
-        },
-        {
-            "name": "Coffee",
-            "price": 50,
-            "img": "img/coffee.jpg"
-        },
-        {
-            "name": "Ham",
-            "price": 120,
-            "img": "img/ham.jpg"
-        }
-    ]
+    "5": {
+        "id": 5,
+        "name": "Cookies",
+        "price": 100,
+        "img": "img/cookies.jpg",
+        "quantity": 1
+    },
+    "6": {
+        "id": 6,
+        "name": "Hamburger",
+        "price": 70,
+        "img": "img/hamburger.jpg",
+        "quantity": 1
+    },
+    "7": {
+        "id": 7,
+        "name": "Coffee",
+        "price": 50,
+        "img": "img/coffee.jpg",
+        "quantity": 1
+    },
+    "8": {
+        "id": 8,
+        "name": "Ham",
+        "price": 120,
+        "img": "img/ham.jpg",
+        "quantity": 1
+    }
 }

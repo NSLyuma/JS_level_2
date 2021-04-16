@@ -1,24 +1,30 @@
 {
-    "data": [
-        {
-            "name": "Pie",
-            "price": 110,
-            "img": "img/pie.jpg"
-        },
-        {
-            "name": "Chocolate",
-            "price": 60,
-            "img": "img/chocolate.jpg"
-        },
-        {
-            "name": "Tomato",
-            "price": 40,
-            "img": "img/tomato.jpg"
-        },
-        {
-            "name": "Apple",
-            "price": 40,
-            "img": "img/apple.jpg"
-        }
-    ]
+    "9": {
+        "id": 9,
+        "name": "Pie",
+        "price": 110,
+        "img": "img/pie.jpg",
+        "quantity": 1
+    },
+    "10": {
+        "id": 10,
+        "name": "Chocolate",
+        "price": 60,
+        "img": "img/chocolate.jpg",
+        "quantity": 1
+    },
+    "11": {
+        "id": 11,
+        "name": "Tomato",
+        "price": 40,
+        "img": "img/tomato.jpg",
+        "quantity": 1
+    },
+    "12": {
+        "id": 12,
+        "name": "Apple",
+        "price": 40,
+        "img": "img/apple.jpg",
+        "quantity": 1
+    }
 }

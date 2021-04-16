@@ -4,9 +4,9 @@
     <div>
       <Catalog />
     </div>
-    <button id="showmore">Show more</button>
 
     <h2>Cart</h2>
+    <AddForm />
     <div class="cart-list">
       <Cart />
     </div>
@@ -16,11 +16,13 @@
 <script>
 import Catalog from "./components/Catalog.vue";
 import Cart from "./components/Cart.vue";
+import AddForm from "./components/AddForm.vue";
 
 export default {
   components: {
     Catalog,
     Cart,
+    AddForm,
   },
 };
 </script>
